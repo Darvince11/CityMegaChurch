@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.tmp/
+.turbo/
+
+# Builds
+dist/
+.next/
+.next-preview/
+coverage/
+*.tsbuildinfo
+turbo/.cache
+
+# Environments — never commit real secrets
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Keep the committed template
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Test artifacts
+playwright-report/
+test-results/

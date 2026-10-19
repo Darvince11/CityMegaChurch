@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile",
+  "buildCommand": "cd ../.. && pnpm db:migrate && pnpm db:seed && pnpm --filter @cdp/api... build",
+  "functions": {
+    "api/v1/[...path].ts": {
+      "maxDuration": 30,
+      "includeFiles": "../../packages/database/migrations/**"
+    }
+  }
+}

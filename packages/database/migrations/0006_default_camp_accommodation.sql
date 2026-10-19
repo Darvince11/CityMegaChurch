@@ -1,0 +1,1 @@
+-- Intentionally empty. Camps and accommodation options are created by an administrator.

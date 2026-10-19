@@ -1,0 +1,9 @@
+{
+  "/(public)/about/page": "app/(public)/about/page.js",
+  "/(public)/accessibility/page": "app/(public)/accessibility/page.js",
+  "/(public)/announcements/page": "app/(public)/announcements/page.js",
+  "/(public)/cookies/page": "app/(public)/cookies/page.js",
+  "/(public)/page": "app/(public)/page.js",
+  "/(public)/privacy/page": "app/(public)/privacy/page.js",
+  "/(public)/terms/page": "app/(public)/terms/page.js"
+}

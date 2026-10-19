@@ -1,0 +1,5 @@
+'use client';
+import Link from 'next/link';
+import { use, useEffect, useState } from 'react';
+import { api, type Announcement } from '@/lib/api';
+export default function AnnouncementDetail({params}:{params:Promise<{id:string}>}):React.JSX.Element{const{id}=use(params);const[item,setItem]=useState<Announcement|null|undefined>(undefined);useEffect(()=>{api.announcements().then(items=>setItem(items.find(entry=>entry.id===id)||null)).catch(()=>setItem(null));},[id]);if(item===undefined)return <main className="detail-page"><div className="container">Loading announcement…</div></main>;if(!item)return <main className="detail-page"><div className="container"><h1>Announcement not found.</h1><Link className="text-link" href="/announcements">Back to announcements</Link></div></main>;return <main className="detail-page"><article className="container detail-article"><p className="eyebrow">{item.kind} · {new Date(item.publishedAt).toLocaleDateString()}</p><h1>{item.title}</h1><div className="detail-copy">{item.body}</div><Link className="text-link" href="/announcements">← All announcements</Link></article></main>}

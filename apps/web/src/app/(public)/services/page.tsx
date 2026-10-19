@@ -1,0 +1,8 @@
+import { PageIntro } from '@/components/page-intro';
+import { Icon } from '@/components/icon';
+
+export const metadata = { title: 'Services' };
+
+export default function ServicesPage(): React.JSX.Element {
+  return <><PageIntro label="WORSHIP WITH US" title="Two days." accent="Three gatherings.">Join City Mega Church for our Sunday services and Thursday Bethel Experience.</PageIntro><section className="section service-schedule"><div className="container"><div className="schedule-heading"><div><p className="eyebrow">SUNDAY SERVICES</p><h2>Begin the week<br/><em>in God’s presence.</em></h2></div><p>Sunday worship is divided into two services. Choose the gathering time that works best for you.</p></div><div className="schedule-grid schedule-grid--sunday"><article className="schedule-card"><span className="schedule-number">01</span><span className="icon-tile"><Icon name="sun"/></span><p className="eyebrow">SUNDAY · FIRST SERVICE</p><h3>First Service</h3><div className="schedule-time"><strong>8:00 AM</strong><span>to</span><strong>10:00 AM</strong></div></article><article className="schedule-card schedule-card--wine"><span className="schedule-number">02</span><span className="icon-tile"><Icon name="people"/></span><p className="eyebrow">SUNDAY · SECOND SERVICE</p><h3>Second Service</h3><div className="schedule-time"><strong>11:00 AM</strong><span>to</span><strong>2:00 PM</strong></div></article></div><div className="bethel-block" id="visit"><div><p className="eyebrow">THURSDAY SERVICE</p><h2>Bethel<br/><em>Experience.</em></h2></div><div className="bethel-time"><span className="icon-tile"><Icon name="clock"/></span><div><small>EVERY THURSDAY</small><strong>7:00 PM — 10:00 PM</strong></div></div></div></div></section></>;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "church-digital-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modular monolith for a modern church — public site, member portal, admin portal, MoMo payments.",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "preview": "node scripts/preview.mjs",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "format": "prettier --write .",
+    "db:migrate": "pnpm --filter @cdp/database db:migrate",
+    "db:seed": "pnpm --filter @cdp/database db:seed",
+    "db:generate": "pnpm --filter @cdp/database db:generate",
+    "db:studio": "pnpm --filter @cdp/database db:studio"
+  },
+  "devDependencies": {
+    "@embedded-postgres/windows-x64": "18.4.0-beta.17",
+    "embedded-postgres": "18.4.0-beta.17",
+    "prettier": "^3.3.3",
+    "turbo": "^2.5.0",
+    "typescript": "^5.6.2"
+  }
+}

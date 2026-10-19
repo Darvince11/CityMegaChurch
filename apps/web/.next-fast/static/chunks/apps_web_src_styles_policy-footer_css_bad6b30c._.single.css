@@ -1,0 +1,117 @@
+/* [project]/apps/web/src/styles/policy-footer.css [app-client] (css) */
+.footer-grid {
+  grid-template-columns: 1.7fr repeat(3, 1fr) 1.25fr;
+  gap: max(1.5rem, min(3vw, 3.5rem));
+}
+
+.footer-grid > div:not(.footer-brand) > a {
+  transition: color .2s, transform .2s;
+}
+
+.footer-grid > div:not(.footer-brand) > a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.footer-contact-column p {
+  margin: 1rem 0 1.4rem !important;
+}
+
+.legal-updated {
+  font: 500 .68rem var(--font-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
+  color: var(--wine) !important;
+}
+
+.legal-page a {
+  color: var(--wine);
+  text-underline-offset: 3px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.legal-page ul {
+  color: var(--muted);
+  padding-left: 1.3rem;
+}
+
+.legal-page li {
+  margin: .6rem 0;
+}
+
+.legal-table-wrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.legal-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+}
+
+.legal-table th, .legal-table td {
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+
+.legal-table th {
+  background: var(--cream);
+  color: var(--wine);
+  font-size: .78rem;
+}
+
+.legal-table td {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.legal-table code {
+  color: var(--wine);
+  font-weight: 700;
+}
+
+@media (max-width: 1050px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr repeat(2, 1fr);
+  }
+
+  .footer-brand, .footer-contact-column {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand, .footer-contact-column {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand, .footer-contact-column {
+    grid-column: auto;
+  }
+
+  .footer-bottom nav {
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem 1.25rem;
+    width: 100%;
+    display: grid;
+  }
+}
+
+/*# sourceMappingURL=apps_web_src_styles_policy-footer_css_bad6b30c._.single.css.map*/
