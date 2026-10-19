@@ -14,6 +14,9 @@ export default defineConfig({
   dialect: 'postgresql',
   dbCredentials: {
     url: process.env.DATABASE_URL ?? 'postgresql://church:church@localhost:5432/church_platform',
+    // Supabase pooler connections are encrypted. The hosted pooler certificate
+    // chain is not available to Drizzle Kit inside Vercel's build sandbox.
+    ssl: process.env.DATABASE_SSL === 'true' ? { rejectUnauthorized: false } : undefined,
   },
   verbose: true,
   strict: true,
