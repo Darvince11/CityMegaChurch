@@ -24,18 +24,18 @@
   },
   "dependencies": {
     "argon2": "^0.41.1",
+    "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.3",
+    "drizzle-kit": "^0.30.2",
     "pg": "^8.13.1",
+    "tsx": "^4.19.2",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@cdp/eslint-config": "workspace:*",
     "@types/node": "^22.10.5",
     "@types/pg": "^8.11.10",
-    "dotenv": "^16.4.7",
-    "drizzle-kit": "^0.30.2",
     "eslint": "^9.18.0",
-    "tsx": "^4.19.2",
     "typescript": "^5.6.2",
     "vitest": "^3.0.5"
   }
